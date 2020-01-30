@@ -1,0 +1,50 @@
+#Eclipse
+.settings/
+.classpath
+.project
+#*.exe
+bin/
+
+#Intellij
+.idea/
+
+#Java
+build
+out/
+history/
+
+#Serenity
+target/
+
+#Gradle
+.gradle/
+
+#metadata
+.metadata/
+
+#sonarlint
+.sonarlint/
+
+#recommenders
+.recommenders/
+ 
+# Compiled class file
+.class
+
+# Log file
+.log
+
+# BlueJ files
+.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+.war
+.ear
+.zip
+.tar.gz
+.rar
+
+ 

@@ -1,0 +1,46 @@
+group 'co.com.bancolombia.certificacion'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven {
+        url "https://artifactory.apps.bancolombia.com/maven-bancolombia/"
+        //url "https://repo1.maven.org/maven2/"
+    }
+}
+
+buildscript {
+    repositories {
+        maven{
+            url "https://artifactory.apps.bancolombia.com/maven-bancolombia/"
+            // url "https://repo1.maven.org/maven2/"
+        }
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.9.14")
+        classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+apply plugin:"org.sonarqube"
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile 'net.serenity-bdd:serenity-core:1.9.14'
+    compile 'net.serenity-bdd:serenity-junit:1.9.14'
+    compile 'net.serenity-bdd:serenity-cucumber:1.9.5'
+    compile 'net.serenity-bdd:serenity-screenplay:1.9.14'
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-screenplay-webdriver
+    compile group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: '1.1.36'
+
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.assertj:assertj-core:3.9.1'
+    testCompile 'org.slf4j:slf4j-simple:1.7.7'
+}
+
+gradle.startParameter.continueOnFailure = true  
