@@ -3,7 +3,6 @@ version '1.0-SNAPSHOT'
 
 repositories {
     maven {
-        //url "https://artifactory.apps.bancolombia.com/maven-bancolombia/"
         url "https://repo1.maven.org/maven2/"
     }
 }
@@ -11,12 +10,11 @@ repositories {
 buildscript {
     repositories {
         maven{
-            //url "https://artifactory.apps.bancolombia.com/maven-bancolombia/"
              url "https://repo1.maven.org/maven2/"
         }
     }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:1.9.14")
+        classpath "net.serenity-bdd:serenity-gradle-plugin:2.0.84"
         classpath("org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.2")
     }
 }
@@ -30,16 +28,17 @@ apply plugin:"org.sonarqube"
 sourceCompatibility = 1.8
 
 dependencies {
-    compile 'net.serenity-bdd:serenity-core:1.9.14'
-    compile 'net.serenity-bdd:serenity-junit:1.9.14'
-    compile 'net.serenity-bdd:serenity-cucumber:1.9.5'
-    compile 'net.serenity-bdd:serenity-screenplay:1.9.14'
-    compile group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: '1.1.36'
-
-
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.assertj:assertj-core:3.9.1'
-    testCompile 'org.slf4j:slf4j-simple:1.7.7'
+    
+    implementation group: 'net.serenity-bdd', name: 'serenity-core', version: '2.0.84'
+    implementation group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.9.48'
+    implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: '2.0.84'
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: '2.0.84'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+    implementation group: 'net.sf.jt400', name: 'jt400', version: '9.5'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'net.serenity-bdd', name: 'serenity-rest-assured', version: '2.0.82'
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-rest', version: '2.0.82'
 }
 
 gradle.startParameter.continueOnFailure = true  

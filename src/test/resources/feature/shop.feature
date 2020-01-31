@@ -5,6 +5,6 @@ Feature: buy in tottus webshop
 
 
   Scenario: Add product
-    Given that I'm on the page tottus
-    When I search and add a product as televisor
-    Then I check my products in the shopping cart
+    Given the user is on the tottus page
+    When the user search and add a product as televisor
+    Then the user check my products in the shopping cart
