@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/feature/services_rest.feature",
         glue = "co.com.retosophos.compratottus.stepdefinitions",
-        snippets = SnippetType.CAMELCASE)
+        snippets = SnippetType.CAMELCASE
+)
 public class ServicesRestRunner {
 
 }

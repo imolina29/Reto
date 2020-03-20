@@ -20,7 +20,7 @@ public class InformationSearch implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                Get.resource("/public-api/users/7?access-token=gBEwVBTFkRguoIBsURuj8115CoQF7phrtyir&first_name={first_name}&last_name={last_name}")
+                Get.resource("/public-api/users/363?access-token=Rsw6sMq63KLUyEf7dd1htiZJe3nOvB5C_XHx&first_name={first_name}&last_name={last_name}")
                         .with(request -> request.pathParams(
                                 "first_name",
                                 dataSearch.getName(), "last_name", dataSearch.getLastName())));

@@ -6,8 +6,8 @@ Feature: Services Rest
     Given the user is on the page
     When search the user with data
       | name | lastName |
-      | Mable | Paucek  |
+      | Guido | Gleichner  |
     Then the user validates the response with the following data
       | name | lastName | gender | email                |
-      | Mable | Paucek  | female | jazmyne.blick@example.org |
+      | Guido | Gleichner  | male | uvonrueden@example.org |
 
