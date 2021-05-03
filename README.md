@@ -5,7 +5,7 @@ Solución compuesta por pruebas automáticas realizada bajo Serenity BDD, Gradle
 ## Clonar el proyecto
 Se sugiere clonar éste proyecto en la raíz del disco de tu computadora; por ejemplo en el disco 'C'. 
 ```bash
-git clone https://github.com/imolina29/RetoSophosSolutions
+git clone https://github.com/imolina29/Reto
 ```
 
 ## Pre-requisitos de automatización
@@ -20,4 +20,4 @@ git clone https://github.com/imolina29/RetoSophosSolutions
 - Github
 
 ## Autores
-Iván Ernesto Molina - imolina29@gmail.com
+Iván Ernesto Molina - ingernestomolina@gmail.com
